@@ -1,0 +1,19 @@
+{
+    "@odata.id": "/redfish/v1/Systems/Storage/1/Drives/DR2",
+    "@odata.type": "#Drives.v1_1_0.Drives",
+    "Id": "DR2",
+    "Name": "Drive Sample 2",
+    "Model": "B123",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "Metrics": {
+        "@odata.context": "/redfish/v1/$metadata#DriveMetrics.DriveMetrics",
+        "BadBlockCount": 5,
+        "PowerOnHours": 10000
+    },
+    "SerialNumber": "4530974368",
+    "CapacityBytes": 1000000000,
+    "@odata.context": "/redfish/v1/$metadata#Systems/437XR1138R2/Storage/1/Drives/DR2"
+}

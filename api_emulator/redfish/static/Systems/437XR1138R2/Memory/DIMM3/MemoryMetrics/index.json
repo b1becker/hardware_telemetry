@@ -1,0 +1,32 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#MemoryMetrics.MemoryMetrics",
+    "@odata.id": "/redfish/v1/Systems/437XR1138R2/Memory/DIMM3/MemoryMetrics",
+    "@odata.type": "#MemoryMetrics.v1_0_0.MemoryMetrics",
+    "Id": "MemoryMetrics",
+    "Name": "Memory Metrics",
+    "Description": "Memory Metrics for DIMM3",
+    "BlockSizeBytes": 512,
+    "CurrentPeriod": {
+        "BlocksRead": 123456,
+        "BlocksWritten": 654321
+    },
+    "LifeTime": {
+        "BlocksRead": 987654321,
+        "BlocksWritten": 123456789
+    },
+    "HealthData": {
+        "AlarmTrips": {
+            "AddressParityError": false,
+            "CorrectableECCError": false,
+            "SpareBlock": false,
+            "Temperature": false,
+            "UncorrectableECCError": false
+        },
+        "DataLossDetected": false,
+        "LastShutdownSuccess": true,
+        "PerformanceDegraded": false,
+        "PredictedMediaLifeLeftPercent": 80
+    },
+    "CapacityUtlizationPercent": 18,
+    "BandwidthPercent": 10
+}

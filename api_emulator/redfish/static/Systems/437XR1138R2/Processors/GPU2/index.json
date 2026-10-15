@@ -1,0 +1,32 @@
+{
+    "@odata.type": "#Processor.v1_0_2.Processor",
+    "Id": "GPU2",
+    "Socket": "GPU 2",
+    "ProcessorType": "GPU",
+    "ProcessorArchitecture": "x86",
+    "InstructionSet": "x86-64",
+    "Manufacturer": "NVIDIA Corporation",
+    "Model": "NVIDIA Tesla V100",
+    "Enabled": true,
+    "ProcessorID": {
+        "VendorID": "NVIDIA",
+        "IdentificationRegisters": "0x34AC34DC8901274B",
+        "EffectiveFamily": "0x42",
+        "EffectiveModel": "0x61",
+        "Step": "0x1",
+        "MicrocodeInfo": "0x429944"
+    },
+    "Metrics": {
+        "@odata.id": "/redfish/v1/Systems/437XR1138R2/Processors/GPU2/Metrics"
+    },
+    "MaxSpeedMHz": 1530,
+    "TotalCores": 5120,
+    "TotalThreads": 10240,
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK"
+    },
+    "@odata.context": "/redfish/v1/$metadata#Systems/Members/437XR1138R2/Processors/Members/$entity",
+    "@odata.id": "/redfish/v1/Systems/437XR1138R2/Processors/GPU2",
+    "@Redfish.Copyright": "Copyright 2014-2016 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright."
+}

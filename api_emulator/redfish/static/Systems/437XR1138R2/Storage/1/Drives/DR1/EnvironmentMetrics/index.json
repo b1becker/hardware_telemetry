@@ -1,0 +1,20 @@
+{
+    "@odata.context": "/redfish/v1/$metadata#EnvironmentMetrics.EnvironmentMetrics",
+    "@odata.id": "/redfish/v1/Systems/437XR1138R2/Storage/1/Drives/DR1/EnvironmentMetrics",
+    "@odata.type": "#EnvironmentMetrics.v1_0_0.EnvironmentMetrics",
+    "Name": "Drive Metrics 1",
+    "ID": "DriveMetricsD1",
+    "Description": "Drive Metrics for DR1",
+    "PowerLoadPercent": {
+        "DataSourceUri": "",
+        "Reading": 62
+    },
+    "PowerWatts": {
+        "DataSourceUri": "",
+        "Reading": 1100
+    },
+    "TemperatureCelsius": {
+        "DataSourceUri": "",
+        "Reading": 32
+    }
+}

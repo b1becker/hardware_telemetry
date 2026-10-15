@@ -1,0 +1,14 @@
+{
+    "@odata.id": "/redfish/v1/Systems/Storage/1/Drives/DR4",
+    "@odata.type": "#Drives.v1_1_0.Drives",
+    "Id": "DR4",
+    "Name": "Drive Sample 4",
+    "Model": "D123",
+    "Status": {
+        "Health": "OK",
+        "State": "Enabled"
+    },
+    "SerialNumber": "8529637415",
+    "CapacityBytes": 789654856000,
+    "@odata.context": "/redfish/v1/$metadata#Systems/437XR1138R2/Storage/1/Drives/DR4"
+}

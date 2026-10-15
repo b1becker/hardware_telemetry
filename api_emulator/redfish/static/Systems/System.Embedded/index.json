@@ -1,0 +1,87 @@
+{
+    "@odata.type": "#ComputerSystem.v1_1_0.ComputerSystem",
+    "Id": "System.Embedded",
+    "Name": "System Example",
+    "SystemType": "Physical",
+    "Manufacturer": "Contoso",
+    "Model": "3500RX",
+    "SerialNumber": "5768XY93",
+    "Description": "Empty Computer System for OS testing",
+    "Status": {
+        "State": "Enabled",
+        "Health": "OK",
+        "HealthRollUp": "OK"
+    },
+    "IndicatorLED": "Off",
+    "PowerState": "On",
+    "Boot": {
+        "BootSourceOverrideEnabled": "Once",
+        "BootSourceOverrideTarget": "Pxe",
+        "BootSourceOverrideTarget@Redfish.AllowableValues": [
+            "None",
+            "Pxe",
+            "Cd",
+            "Usb",
+            "Hdd",
+            "BiosSetup",
+            "Utilities",
+            "Diags",
+            "SDCard",
+            "UefiTarget"
+        ],
+        "BootSourceOverrideMode": "UEFI",
+        "UefiTargetBootSourceOverride": "/0x31/0x33/0x01/0x01"
+    },
+    "TrustedModules": [
+        {
+            "FirmwareVersion": "1.13b",
+            "InterfaceType": "TPM1_2",
+            "Status": {
+                "State": "Enabled",
+                "Health": "OK"
+            }
+        }
+    ],
+    "BiosVersion": "P79 v2",
+    "ProcessorSummary": {
+        "Count": 0,
+        "ProcessorFamily": ""
+    },
+    "MemorySummary": {
+        "TotalSystemMemoryGiB": 0,
+        "Status": {
+            "State": "Absent"
+        }
+    },
+    "Bios": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded/Bios"
+    },
+    "OperatingSystem": "/redfish/v1/Systems/System.Embedded/OperatingSystem",
+    "Processors": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded/Processors"
+    },
+    "Memory": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded/Memory"
+    },
+    "Storage": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded/Storage"
+    },
+    "LogServices": {
+        "@odata.id": "/redfish/v1/Systems/System.Embedded/LogServices"
+    },
+    "Links": {
+        "Chassis": [
+            {
+                "@odata.id": "/redfish/v1/Chassis/1U"
+            }
+        ],
+        "ManagedBy": [
+            {
+                "@odata.id": "/redfish/v1/Managers/BMC"
+            }
+        ]
+    },
+    "@odata.context": "/redfish/v1/$metadata#ComputerSystem.ComputerSystem",
+    "@odata.id": "/redfish/v1/Systems/System.Embedded",
+    "@Redfish.Copyright": "Copyright 2014-2016 DMTF. For the full DMTF copyright policy, see http://www.dmtf.org/about/policies/copyright."
+}

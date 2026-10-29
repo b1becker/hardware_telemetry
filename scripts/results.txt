@@ -1,0 +1,300 @@
+
+============================================================
+ 1. SYSTEM INVENTORY
+============================================================
+[FOUND]   Board model                         /sys/firmware/devicetree/base/model
+          VALUE: Raspberry Pi 3 Model B Rev 1.2 
+[FOUND]   Board serial                        /sys/firmware/devicetree/base/serial-number
+          VALUE: 000000006fd0b00f 
+[FOUND]   CPU information                     /proc/cpuinfo
+          VALUE: processor	: 0 BogoMIPS	: 38.40 Features	: fp asimd evtstrm crc32 cpuid CPU implementer	: 0x41 CPU architecture: 8 CPU variant	: 0x0 CPU part	: 0xd03 CPU revision	: 4  processor	: 1 BogoMIPS	: 38.40 Features	: fp asimd evtstrm crc32 cpuid CPU implementer	: 0x41 CPU architecture: 8 CPU variant	: 0x0 CPU part	: 0xd03 CPU revision	: 4  processor	: 2 BogoMIPS	: 38.40 Features	: fp asimd evtstrm crc32 cpuid CPU implementer	: 0x41 CPU architecture: 8 CPU variant	: 0x0 CPU part	: 0xd03 CPU revision	: 4  processor	: 3 BogoMIPS	: 38.40 Features	: fp asimd evtstrm crc32 cpuid CPU implementer	: 0x41 CPU architecture: 8 CPU variant	: 0x0 CPU part	: 0xd03 CPU revision	: 4  Revision	: a02082 Serial		: 000000006fd0b00f Model		: Raspberry Pi 3 Model B Rev 1.2 
+[FOUND]   System memory                       /proc/meminfo
+          VALUE: MemTotal:         926764 kB MemFree:          190548 kB MemAvailable:     539444 kB Buffers:           29516 kB Cached:           392624 kB SwapCached:            0 kB Active:           537992 kB Inactive:          76236 kB Active(anon):     233256 kB Inactive(anon):        0 kB Active(file):     304736 kB Inactive(file):    76236 kB Unevictable:           0 kB Mlocked:               0 kB SwapTotal:        926716 kB SwapFree:         926716 kB Zswap:                 0 kB Zswapped:              0 kB Dirty:                 0 kB Writeback:             0 kB AnonPages:        192256 kB Mapped:           211988 kB Shmem:             41308 kB KReclaimable:      26216 kB Slab:              57200 kB SReclaimable:      26216 kB SUnreclaim:        30984 kB KernelStack:        4984 kB PageTables:         8184 kB SecPageTables:         0 kB NFS_Unstable:          0 kB Bounce:                0 kB WritebackTmp:          0 kB CommitLimit:     1390096 kB Committed_AS:    1698776 kB VmallocTotal:   261087232 kB VmallocUsed:       19560 kB VmallocChunk:          0 kB Percpu:              768 kB CmaTotal:         262144 kB CmaFree:          143616 kB Balloon:               0 kB 
+[FOUND]   Boot time / btime                   /proc/stat
+          VALUE: cpu  128225 6 9380 1642873 2091 0 586 0 0 0 cpu0 24490 6 2524 417917 538 0 144 0 0 0 cpu1 36336 0 2174 406761 450 0 149 0 0 0 cpu2 28372 0 2441 414263 533 0 150 0 0 0 cpu3 39026 0 2240 403931 568 0 141 0 0 0 intr 59769988 0 0 13180 90 0 70881 1307885 0 0 0 7612 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 46155582 0 0 0 0 0 0 0 0 11856 0 11297 0 0 0 0 0 0 0 0 0 0 0 9184470 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 634 4479 0 0 0 0 613644 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2388358 0 0 0 20 ctxt 5604974 btime 1793247289 processes 2266 procs_running 3 procs_blocked 0 softirq 1703929 7497 287479 7 52186 39 0 472902 660739 0 223080 
+[FOUND]   Hostname                            /etc/hostname
+          VALUE: lemon01 
+[MISSING] DMI manufacturer (alternative)      /sys/class/dmi/id/sys_vendor
+[MISSING] DMI model (alternative)             /sys/class/dmi/id/product_name
+[MISSING] DMI system UUID (alternative)       /sys/class/dmi/id/product_uuid
+[MISSING] BIOS version (alternative)          /sys/class/dmi/id/bios_version
+
+Boot time:
+btime 1793247289
+
+Memory total:
+MemTotal:         926764 kB
+
+============================================================
+ 2. PROCESSOR INVENTORY
+============================================================
+[FOUND]                                       /sys/devices/system/cpu
+
+Discovered CPUs:
+  /sys/devices/system/cpu/cpu0
+  /sys/devices/system/cpu/cpu1
+  /sys/devices/system/cpu/cpu2
+  /sys/devices/system/cpu/cpu3
+
+CPU frequency paths:
+[FOUND]   Maximum CPU frequency               /sys/devices/system/cpu/cpu0/cpufreq/cpuinfo_max_freq
+          VALUE: 1200000 
+[FOUND]   Current CPU frequency               /sys/devices/system/cpu/cpu0/cpufreq/scaling_cur_freq
+          VALUE: 1200000 
+[FOUND]   Maximum CPU frequency               /sys/devices/system/cpu/cpu1/cpufreq/cpuinfo_max_freq
+          VALUE: 1200000 
+[FOUND]   Current CPU frequency               /sys/devices/system/cpu/cpu1/cpufreq/scaling_cur_freq
+          VALUE: 1200000 
+[FOUND]   Maximum CPU frequency               /sys/devices/system/cpu/cpu2/cpufreq/cpuinfo_max_freq
+          VALUE: 1200000 
+[FOUND]   Current CPU frequency               /sys/devices/system/cpu/cpu2/cpufreq/scaling_cur_freq
+          VALUE: 1200000 
+[FOUND]   Maximum CPU frequency               /sys/devices/system/cpu/cpu3/cpufreq/cpuinfo_max_freq
+          VALUE: 1200000 
+[FOUND]   Current CPU frequency               /sys/devices/system/cpu/cpu3/cpufreq/scaling_cur_freq
+          VALUE: 1200000 
+
+Architecture:
+aarch64
+
+CPU online:
+0-3
+
+============================================================
+ 3. PROCESSOR THROTTLING
+============================================================
+[FOUND]   Command available: vcgencmd
+
+Throttling flags:
+throttled=0x0
+
+CPU temperature:
+temp=45.1'C
+
+============================================================
+ 4. MEMORY / ECC
+============================================================
+[MISSING]                                     /sys/devices/system/edac/mc
+
+Individual memory module information:
+EDAC directory unavailable.
+
+============================================================
+ 5. STORAGE DISCOVERY
+============================================================
+[FOUND]   Command available: lsblk
+NAME        MODEL SERIAL      SIZE TRAN ROTA
+loop0                         905M         0
+mmcblk0           0xde8c55f4 59.5G mmc     0
+├─mmcblk0p1                   512M mmc     0
+└─mmcblk0p2                    59G mmc     0
+zram0                         905M         0
+[FOUND]                                       /sys/block
+
+---- DRIVE: mmcblk0 ----
+[FOUND]   Drive capacity (512-byte sectors)   /sys/block/mmcblk0/size
+          VALUE: 124735488 
+[FOUND]   Rotational indicator                /sys/block/mmcblk0/queue/rotational
+          VALUE: 0 
+[MISSING] Drive model                         /sys/block/mmcblk0/device/model
+[MISSING] Drive manufacturer                  /sys/block/mmcblk0/device/vendor
+[FOUND]   Drive serial                        /sys/block/mmcblk0/device/serial
+          VALUE: 0xde8c55f4 
+[MISSING] Drive firmware revision             /sys/block/mmcblk0/device/rev
+[FOUND]   Drive I/O statistics                /sys/block/mmcblk0/stat
+          VALUE:    10763     3433   884346    51790      582     1097    14041     8242        0    25204    60033        0        0        0        0        0        0 
+Device details:
+ID_SERIAL=0xde8c55f4
+
+---- DRIVE: zram0 ----
+[FOUND]   Drive capacity (512-byte sectors)   /sys/block/zram0/size
+          VALUE: 1853440 
+[FOUND]   Rotational indicator                /sys/block/zram0/queue/rotational
+          VALUE: 0 
+[MISSING] Drive model                         /sys/block/zram0/device/model
+[MISSING] Drive manufacturer                  /sys/block/zram0/device/vendor
+[MISSING] Drive serial                        /sys/block/zram0/device/serial
+[MISSING] Drive firmware revision             /sys/block/zram0/device/rev
+[FOUND]   Drive I/O statistics                /sys/block/zram0/stat
+          VALUE:       87        0     2864       32        1        0        8        0        0       32       32        0        0        0        0        0        0 
+Device details:
+
+============================================================
+ 6. STORAGE SMART / NVME
+============================================================
+[OPTIONAL] Command unavailable: smartctl
+[OPTIONAL] Command unavailable: nvme
+
+============================================================
+ 7. NETWORK INTERFACES
+============================================================
+[FOUND]                                       /sys/class/net
+
+---- INTERFACE: eth0 ----
+[FOUND]   Interface index                     /sys/class/net/eth0/ifindex
+          VALUE: 2 
+[FOUND]   Current MAC address                 /sys/class/net/eth0/address
+          VALUE: b8:27:eb:d0:b0:0f 
+[FOUND]   Link state                          /sys/class/net/eth0/operstate
+          VALUE: down 
+[FOUND]   Link speed                          /sys/class/net/eth0/speed
+          VALUE: -1 
+[FOUND]   Duplex                              /sys/class/net/eth0/duplex
+          VALUE: unknown 
+[FOUND]   Interface type                      /sys/class/net/eth0/type
+          VALUE: 1 
+[FOUND]                                       /sys/class/net/eth0/statistics
+[FOUND]   eth0 rx_bytes                       /sys/class/net/eth0/statistics/rx_bytes
+          VALUE: 452540 
+[FOUND]   eth0 tx_bytes                       /sys/class/net/eth0/statistics/tx_bytes
+          VALUE: 311469 
+[FOUND]   eth0 rx_errors                      /sys/class/net/eth0/statistics/rx_errors
+          VALUE: 0 
+[FOUND]   eth0 tx_errors                      /sys/class/net/eth0/statistics/tx_errors
+          VALUE: 0 
+[FOUND]   eth0 rx_packets                     /sys/class/net/eth0/statistics/rx_packets
+          VALUE: 4027 
+[FOUND]   eth0 tx_packets                     /sys/class/net/eth0/statistics/tx_packets
+          VALUE: 2168 
+[FOUND]   eth0 rx_dropped                     /sys/class/net/eth0/statistics/rx_dropped
+          VALUE: 0 
+[FOUND]   eth0 tx_dropped                     /sys/class/net/eth0/statistics/tx_dropped
+          VALUE: 10 
+[FOUND]   eth0 rx_crc_errors                  /sys/class/net/eth0/statistics/rx_crc_errors
+          VALUE: 0 
+
+Permanent MAC:
+Permanent address: b8:27:eb:d0:b0:0f
+
+---- INTERFACE: lo ----
+[FOUND]   Interface index                     /sys/class/net/lo/ifindex
+          VALUE: 1 
+[FOUND]   Current MAC address                 /sys/class/net/lo/address
+          VALUE: 00:00:00:00:00:00 
+[FOUND]   Link state                          /sys/class/net/lo/operstate
+          VALUE: unknown 
+[FOUND]   Link speed                          /sys/class/net/lo/speed
+          VALUE: <empty>
+[FOUND]   Duplex                              /sys/class/net/lo/duplex
+          VALUE: <empty>
+[FOUND]   Interface type                      /sys/class/net/lo/type
+          VALUE: 772 
+[FOUND]                                       /sys/class/net/lo/statistics
+[FOUND]   lo rx_bytes                         /sys/class/net/lo/statistics/rx_bytes
+          VALUE: 2684 
+[FOUND]   lo tx_bytes                         /sys/class/net/lo/statistics/tx_bytes
+          VALUE: 2684 
+[FOUND]   lo rx_errors                        /sys/class/net/lo/statistics/rx_errors
+          VALUE: 0 
+[FOUND]   lo tx_errors                        /sys/class/net/lo/statistics/tx_errors
+          VALUE: 0 
+[FOUND]   lo rx_packets                       /sys/class/net/lo/statistics/rx_packets
+          VALUE: 17 
+[FOUND]   lo tx_packets                       /sys/class/net/lo/statistics/tx_packets
+          VALUE: 17 
+[FOUND]   lo rx_dropped                       /sys/class/net/lo/statistics/rx_dropped
+          VALUE: 0 
+[FOUND]   lo tx_dropped                       /sys/class/net/lo/statistics/tx_dropped
+          VALUE: 0 
+[FOUND]   lo rx_crc_errors                    /sys/class/net/lo/statistics/rx_crc_errors
+          VALUE: 0 
+
+Permanent MAC:
+Permanent address: not set
+
+---- INTERFACE: wlan0 ----
+[FOUND]   Interface index                     /sys/class/net/wlan0/ifindex
+          VALUE: 3 
+[FOUND]   Current MAC address                 /sys/class/net/wlan0/address
+          VALUE: b8:27:eb:85:e5:5a 
+[FOUND]   Link state                          /sys/class/net/wlan0/operstate
+          VALUE: up 
+[FOUND]   Link speed                          /sys/class/net/wlan0/speed
+          VALUE: <empty>
+[FOUND]   Duplex                              /sys/class/net/wlan0/duplex
+          VALUE: <empty>
+[FOUND]   Interface type                      /sys/class/net/wlan0/type
+          VALUE: 1 
+[FOUND]                                       /sys/class/net/wlan0/statistics
+[FOUND]   wlan0 rx_bytes                      /sys/class/net/wlan0/statistics/rx_bytes
+          VALUE: 5178953 
+[FOUND]   wlan0 tx_bytes                      /sys/class/net/wlan0/statistics/tx_bytes
+          VALUE: 67100132 
+[FOUND]   wlan0 rx_errors                     /sys/class/net/wlan0/statistics/rx_errors
+          VALUE: 0 
+[FOUND]   wlan0 tx_errors                     /sys/class/net/wlan0/statistics/tx_errors
+          VALUE: 0 
+[FOUND]   wlan0 rx_packets                    /sys/class/net/wlan0/statistics/rx_packets
+          VALUE: 48158 
+[FOUND]   wlan0 tx_packets                    /sys/class/net/wlan0/statistics/tx_packets
+          VALUE: 78052 
+[FOUND]   wlan0 rx_dropped                    /sys/class/net/wlan0/statistics/rx_dropped
+          VALUE: 0 
+[FOUND]   wlan0 tx_dropped                    /sys/class/net/wlan0/statistics/tx_dropped
+          VALUE: 3 
+[FOUND]   wlan0 rx_crc_errors                 /sys/class/net/wlan0/statistics/rx_crc_errors
+          VALUE: 0 
+
+Permanent MAC:
+Permanent address: b8:27:eb:85:e5:5a
+[FOUND]   Command available: ethtool
+
+============================================================
+ 8. THERMAL ZONES
+============================================================
+[FOUND]                                       /sys/class/thermal
+
+---- THERMAL ZONE: thermal_zone0 ----
+[FOUND]   Thermal sensor type                 /sys/class/thermal/thermal_zone0/type
+          VALUE: cpu-thermal 
+[FOUND]   Thermal temperature                 /sys/class/thermal/thermal_zone0/temp
+          VALUE: 46160 
+
+============================================================
+ 9. HARDWARE MONITORING SENSORS
+============================================================
+[FOUND]                                       /sys/class/hwmon
+
+---- HWMON: hwmon0 ----
+[FOUND]   Hardware monitor name               /sys/class/hwmon/hwmon0/name
+          VALUE: cpu_thermal 
+[FOUND]   Sensor reading                      /sys/class/hwmon/hwmon0/temp1_input
+          VALUE: 46160 
+
+---- HWMON: hwmon1 ----
+[FOUND]   Hardware monitor name               /sys/class/hwmon/hwmon1/name
+          VALUE: rpi_volt 
+
+============================================================
+ 10. RAS / ADDITIONAL HARDWARE SOURCES
+============================================================
+[MISSING]                                     /sys/devices/system/edac
+[FOUND]                                       /sys/firmware/devicetree/base
+[MISSING]                                     /sys/class/dmi/id
+
+Installed kernel:
+Linux lemon01 6.18.50+rpt-rpi-v8 #1 SMP PREEMPT Debian 1:6.18.50-1+rpt1 (2026-09-11) aarch64 GNU/Linux
+
+Device tree model:
+Raspberry Pi 3 Model B Rev 1.2
+
+============================================================
+ 11. FINAL AUDIT SUMMARY
+============================================================
+Found/readable checks : 83
+Missing paths         : 14
+Permission warnings   : 0
+Optional tools absent : 2
+
+============================================================
+ AUDIT COMPLETE
+============================================================
+
+IMPORTANT:
+- FOUND means the path exists and was readable.
+- MISSING means this particular candidate path is absent.
+- OPTIONAL means a utility is not installed.
+- Hardware-dependent properties may legitimately be absent.
+- Presence does not guarantee that a value has the required
+  Redfish meaning.
+- Review sensor identities and drive/interface associations.

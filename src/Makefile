@@ -2,8 +2,8 @@
 CXX = g++
 CXXFLAGS = -std=c++20 -Wall -Wextra -Wpedantic -O2
 
-TARGET = temperature_collector
-SRC = src/temperature_collector.cpp
+TARGET = temp_collector
+SRC = src/temp_collector.cpp
 
 .PHONY: all clean run
 

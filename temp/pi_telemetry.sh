@@ -85,7 +85,7 @@ grep '^btime' /proc/stat 2>/dev/null || true
 
 echo
 echo "Memory total:"
-grep '^MemTotal' /proc/meminfo 2>/dev/null || true
+grep '^MemTotal' /proc/meminfoin 2>/dev/null || true
 
 # ------------------------------------------------------------
 section "2. PROCESSOR INVENTORY"

@@ -1,17 +1,25 @@
-CXX      = clang++
-CXXFLAGS = -g3 -Wall -Wextra -Wpedantic -Wshadow -std=c++17 \
-           -Iinclude -I/usr/local/opt/asio/include
-LDFLAGS  = -g3 -pthread
+#########################################################
+#                PI CONNECT LISTENER                    #
+#########################################################
+
+CXX = g++
+ASIO_INCLUDE = $(shell if [ -d /usr/local/opt/asio/include ]; then echo /usr/local/opt/asio/include; else echo /usr/include; fi)
+CXXFLAGS = -g3 -Wall -Wextra -Wpedantic -Wshadow -std=c++17 -pthread \
+           -Iinclude -I$(ASIO_INCLUDE)
+LDFLAGS = -g3 -pthread
 
 # Build the listener executable
-listener: listener.o
-	${CXX} ${CXXFLAGS} ${LDFLAGS} -o listener listener.o
+all: listener
 
-main: main.o
-	${CXX} ${CXXFLAGS} ${LDFLAGS} -o main main.o
+listener: listener.o
+	${CXX} ${LDFLAGS} -o listener listener.o
 
 # Build the listener object file
 listener.o: listener.cpp
 	${CXX} ${CXXFLAGS} -c listener.cpp
 
-# Remove executables, object files, and temporary files
+# Remove executables and object files
+clean:
+	rm -f listener *.o *~
+
+.PHONY: all clean

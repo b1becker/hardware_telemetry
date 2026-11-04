@@ -11,7 +11,7 @@ find_package(OpenSSL REQUIRED)
 
 # Build the Redfish daemon
 add_executable(hardwaretelemetry
-    src/main.cpp
+    main.cpp
 )
 
 # Find project headers

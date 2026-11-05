@@ -10,6 +10,9 @@ add_executable(hardware-telemetry
     src/collectors/SysInfoCollector.cpp
 )
 
+find_package(Crow)
+target_link_libraries(your_project PUBLIC Crow::Crow)
+
 target_include_directories(hardware-telemetry
     PRIVATE include
 )

@@ -58,10 +58,7 @@ int main()
     std::cout << "Endpoint: /redfish/v1/Systems/1\n";
 
     // Start HTTP server
-    app.bindaddr("0.0.0.0")
-       .port(18080)
-       .multithreaded()
-       .run();
+    app.port(18080).multithreaded().run();
 
     std::cout << "HardwareTelemetry daemon stopped.\n";
 

@@ -1,43 +1,32 @@
 
-#include "include/crow.h"
+#include "crow.h"
 #include "collectors/SysInfoCollector.h"
 
 #include <iostream>
-#include <string>
+#include <csignal>
 
-// Convert collected system information into a Redfish-style JSON response
-crow::json::wvalue handleRequest(
-    const SystemInfo& info
-) {
+// Convert collected system information into JSON
+crow::json::wvalue handleRequest(const SystemInfo& info)
+{
     crow::json::wvalue response;
 
-    // Static Redfish resource information
     response["@odata.id"] = "/redfish/v1/Systems/1";
     response["Id"] = "1";
     response["Name"] = "Edge System";
 
-    // Values collected from Linux
     response["HostName"] = info.hostname;
 
-    if (info.uuid) {
+    if (info.uuid)
         response["UUID"] = *info.uuid;
-    }
 
-    if (info.biosVersion) {
+    if (info.biosVersion)
         response["BiosVersion"] = *info.biosVersion;
-    }
 
     if (info.totalMemoryGiB) {
-        crow::json::wvalue memorySummary;
-        memorySummary["TotalSystemMemoryGiB"] =
-            *info.totalMemoryGiB;
-
-        response["MemorySummary"] = std::move(memorySummary);
+        crow::json::wvalue memory;
+        memory["TotalSystemMemoryGiB"] = *info.totalMemoryGiB;
+        response["MemorySummary"] = std::move(memory);
     }
-
-    // Boot time is currently Unix seconds.
-    // Convert it to the required Redfish date-time format
-    // in a later normalization step before exposing LastResetTime.
 
     return response;
 }
@@ -46,25 +35,35 @@ int main()
 {
     crow::SimpleApp app;
 
-    // Create the collector once when the daemon starts
+    // Initialize Linux telemetry collector
     LinuxSysInfoCollector collector;
 
-    // Register the Redfish System resource route
+    // Register endpoint
     CROW_ROUTE(app, "/redfish/v1/Systems/1")
     ([&collector]() {
 
-        // Collect current system information
+        std::cout << "Received system telemetry request"
+                  << std::endl;
+
         SystemInfo info = collector.collect();
 
-        // Return the JSON response
         return handleRequest(info);
     });
 
-    std::cout << "HardwareTelemetry daemon listening on port 18080..."
-              << std::endl;
+    std::cout << "====================================\n";
+    std::cout << " HardwareTelemetry Daemon Starting\n";
+    std::cout << "====================================\n";
+    std::cout << "Listening address: 0.0.0.0\n";
+    std::cout << "Listening port: 18080\n";
+    std::cout << "Endpoint: /redfish/v1/Systems/1\n";
 
-    // Crow manages the HTTP server and incoming connections
-    app.port(18080).multithreaded().run();
+    // Start HTTP server
+    app.bindaddr("0.0.0.0")
+       .port(18080)
+       .multithreaded()
+       .run();
+
+    std::cout << "HardwareTelemetry daemon stopped.\n";
 
     return 0;
 }

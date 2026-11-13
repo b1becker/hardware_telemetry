@@ -22,7 +22,8 @@ find_package(Threads REQUIRED)
 # Build daemon
 add_executable(hardware-telemetry
     main.cpp
-    src/collectors/SysInfoCollector.cpp
+    collectors/SysInfoCollector.cpp
+    collectors/ProcessorCollector.cpp
 )
 
 # Include project headers
